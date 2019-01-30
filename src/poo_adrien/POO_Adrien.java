@@ -5,6 +5,7 @@
  */
 package poo_adrien;
 
+import Entities.Maison;
 import Entities.Personne;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -27,6 +28,10 @@ public class POO_Adrien {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date dateTampon = null;
         String dateNaissanceTampon = "";
+        
+        //Nos Maisons
+        Maison maisonFabienne = new Maison(25, "Rue de Ludo", 70000, "Vesoul");
+        Maison maisonLudovic = new Maison(55, "Rue de Besançon", 39100, "Dole");
 
         //Nos personnes
         Personne suzane = new Personne();
@@ -67,6 +72,8 @@ public class POO_Adrien {
         suzane.getEnfants().add(fabienne);
         fabienne.setPapa(yves);
         yves.getEnfants().add(fabienne);
+        fabienne.setMaison(maisonFabienne);
+        
 
         Personne jeanl = new Personne();
         jeanl.setPrenom("jean luc");
@@ -102,6 +109,8 @@ public class POO_Adrien {
         jeanl.getEnfants().add(adrien);
 
         // FIN DU JEU DE TEST
-        System.out.println(fabienne);
+        System.out.println(fabienne.getMaison());
+        System.out.println(maisonFabienne);
+        System.out.println(adrien.getMaman().getMaison());
     }
 }

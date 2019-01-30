@@ -26,8 +26,7 @@ public class Maison {
     public Maison() {
     }
 
-    public Maison(Integer id, Integer numRue, String rue, Integer cp, String ville) {
-        this.id = id;
+    public Maison(Integer numRue, String rue, Integer cp, String ville) {
         this.numRue = numRue;
         this.rue = rue;
         this.cp = cp;
@@ -87,12 +86,9 @@ public class Maison {
     @Override
     public String toString() {
         String sautDeLigne = System.getProperty("line.separator");
-        return this.numRue + " "
-                + this.rue + " "
+        return this.numRue + " " + this.rue + " "
                 + sautDeLigne
-                + this.cp + " "
-                + this.ville;
-
+                + this.cp + " " + this.ville;
     }
     /*
     nos fonctions
